@@ -1,0 +1,121 @@
+/*
+FONTS
+*/
+@font-face {
+    font-family: 'opensans-regular';
+    src: url('../fonts/opensans-regular/opensans-regular.eot');
+    src: url('../fonts/opensans-regular/opensans-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-regular/opensans-regular.woff') format('woff'),
+         url('../fonts/opensans-regular/opensans-regular.ttf') format('truetype'),
+         url('../fonts/opensans-regular/opensans-regular.svg#opensans-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*
+HTML
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+body {
+    font-family: 'opensans-regular', arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.4;
+    background: url(../images/body-bg.png);
+
+    height: 100%;
+}
+img {
+    vertical-align: middle;
+    width: 100%;
+}
+p{
+    margin: 12px 0;
+}
+
+/*
+HELPERS
+*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+.centred{
+    margin: 0 auto;
+}
+
+.wrapper{
+    display: block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+LAYOUT
+*/
+.site-width{
+    width: 90%;
+    max-width: 950px;
+}
+#contenido{
+    border: 1px solid #666;
+
+    -moz-box-shadow: 0px 0px 8px 0px #252525;
+    -webkit-box-shadow: 0px 0px 8px 0px #252525;
+    box-shadow: 0px 0px 8px 0px #252525;
+
+    background: #cccccc;
+    background: -moz-linear-gradient(top,  #cccccc 0%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(top,  #cccccc 0%,#ffffff 100%);
+    background: -o-linear-gradient(top,  #cccccc 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top,  #cccccc 0%,#ffffff 100%);
+    background: linear-gradient(to bottom,  #cccccc 0%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=0 );
+}
+.row {
+  margin-left: -25px;
+}
+.column{
+    display: block;
+    float: left;
+    padding-left: 25px;
+}
+.c1{
+    width: 60%;
+}
+.c2{
+    width: 40%;
+}
+.pacman-img{
+    max-height: 270px;
+}
+/*
+RESPONSIVE
+*/
+@media screen and (max-width : 600px) {
+    .c1,
+    .c2{
+        width: 100%;
+        float: none;
+    }
+}
+
+
+
