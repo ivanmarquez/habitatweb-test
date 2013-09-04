@@ -15,7 +15,6 @@
         <script>
             $(function() {
                 if(!Modernizr.svg) {
-                    console.log($('img[src*="svg"]'));
                     $('img[src*="svg"]').attr('src', function() {
                         return $(this).attr('src').replace('.svg', '.png');
                     });
