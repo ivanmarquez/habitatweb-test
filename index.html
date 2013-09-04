@@ -9,12 +9,25 @@
         <title>Habitat Web - Test</title>
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="assets/css/main.css">
+        <script src="assets/js/jquery-1.9.1.min.js"></script>
+        <script src="assets/js/modernizr-2.6.2.min.js"></script>
+
+        <script>
+            $(function() {
+                if(!Modernizr.svg) {
+                    console.log($('img[src*="svg"]'));
+                    $('img[src*="svg"]').attr('src', function() {
+                        return $(this).attr('src').replace('.svg', '.png');
+                    });
+                }
+            });
+        </script>
     </head>
     <body>
         <div id="contenido" class="site-width wrapper centred clearfix">
             <div class="row">
                 <div class="column wrapper c1">
-                    <p><img src="assets/images/pacman.svg" alt="Pacman" class="pacman-img"></p>
+                    <p><img src="assets/images/pacman.svg" alt="Pacman" class="pacman-img centred"></p>
                      <p>Etiam vel dui in leo commodo euismod a nec libero. Donec in felis pharetra, sodales leo sed, tempor lacus.
                         Sed at magna commodo, rutrum risus in, elementum massa. Aliquam tellus mi, dignissim sit amet dolor id, varius tristique ipsum.
                         Donec molestie magna ac elit convallis, vel faucibus augue suscipit. Ut porta sapien sed tortor feugiat vestibulum.
